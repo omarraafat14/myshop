@@ -42,7 +42,7 @@ DJANGO_APPS = [
 
 LOCAL_APPS = [
     "shop.apps.ShopConfig",
-    'cart.apps.CartConfig',
+    "cart.apps.CartConfig",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
@@ -70,6 +70,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "cart.context_processors.cart",
             ],
         },
     },
