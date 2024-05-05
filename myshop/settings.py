@@ -43,6 +43,7 @@ DJANGO_APPS = [
 LOCAL_APPS = [
     "shop.apps.ShopConfig",
     "cart.apps.CartConfig",
+    "orders.apps.OrdersConfig",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
