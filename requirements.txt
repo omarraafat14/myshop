@@ -1,3 +1,4 @@
 Django~=4.1
 python-decouple
 Pillow==9.2.0
+celery==5.2.7
