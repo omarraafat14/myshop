@@ -37,7 +37,6 @@ def cart_clear(request):
     return redirect("cart:cart_detail")
 
 
-@require_POST
 def cart_detail(request):
     cart = Cart(request)
     return render(request, "cart/detail.html", {"cart": cart})
