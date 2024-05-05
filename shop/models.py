@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 # Create your models here.
@@ -17,6 +18,9 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse("shop:product_list_by_category", args=[self.slug])
+
 
 class Product(models.Model):
     category = models.ForeignKey(
@@ -34,10 +38,15 @@ class Product(models.Model):
     class Meta:
         ordering = ["name"]
         indexes = [
-            models.Index(fields=["id", "slug"]),  # to improve performance for queries that utilize the two fields.
+            models.Index(
+                fields=["id", "slug"]
+            ),  # to improve performance for queries that utilize the two fields.
             models.Index(fields=["name"]),
             models.Index(fields=["-created"]),  # hyphen = descending order.
         ]
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse("shop:product_detail", args=[self.id, self.slug])
