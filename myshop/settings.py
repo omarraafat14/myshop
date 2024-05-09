@@ -44,6 +44,7 @@ LOCAL_APPS = [
     "shop.apps.ShopConfig",
     "cart.apps.CartConfig",
     "orders.apps.OrdersConfig",
+    'payment.apps.PaymentConfig',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
