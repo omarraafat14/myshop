@@ -11,3 +11,6 @@ management user interface on port 15672.
 
 - Running a Celery worker:
 `celery -A myshop worker -l info`
+
+- Monitoring Celery with Flower:
+`celery -A myshop flower`
