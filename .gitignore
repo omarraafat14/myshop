@@ -154,3 +154,5 @@ cython_debug/
 
 static/
 media/
+*.crt
+*.key
