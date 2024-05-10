@@ -26,7 +26,7 @@ SECRET_KEY = config("SECRET_KEY", cast=str)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "mysite.com"]
 
 
 # Application definition
@@ -47,7 +47,11 @@ LOCAL_APPS = [
     'payment.apps.PaymentConfig',
 ]
 
-INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
+THIRD_PARTY_APPS = [
+    "django_extensions",
+]
+
+INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

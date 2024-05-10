@@ -3,3 +3,7 @@ python-decouple
 Pillow==9.2.0
 celery==5.2.7
 flower==1.1.0
+stripe==4.0.2
+git+https://github.com/django-extensions/django-extensions.git
+werkzeug==2.2.2
+pyOpenSSL==24.0.0
