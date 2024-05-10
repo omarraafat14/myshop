@@ -1,5 +1,7 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
+
+from orders.admin_actions import export_to_csv
 from .models import Order, OrderItem
 
 
@@ -26,6 +28,7 @@ class OrderAdmin(admin.ModelAdmin):
     ]
     list_filter = ["paid", "created", "updated"]
     inlines = [OrderItemInline]
+    actions = [export_to_csv]
 
     def order_payment(self, obj):
         url = obj.get_stripe_url()
