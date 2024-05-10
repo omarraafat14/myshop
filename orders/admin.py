@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
-
+from django.urls import reverse
 from orders.admin_actions import export_to_csv
 from .models import Order, OrderItem
 
@@ -25,6 +25,7 @@ class OrderAdmin(admin.ModelAdmin):
         "order_payment",
         "created",
         "updated",
+        "order_detail",
     ]
     list_filter = ["paid", "created", "updated"]
     inlines = [OrderItemInline]
@@ -38,3 +39,7 @@ class OrderAdmin(admin.ModelAdmin):
         return ""
 
     order_payment.short_description = "Stripe payment"
+
+    def order_detail(self, obj):
+        url = reverse("orders:admin_order_detail", args=[obj.id])
+        return mark_safe(f'<a href="{url}">View</a>')
