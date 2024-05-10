@@ -1,4 +1,4 @@
-## Description
+# MyShop
 - A fully-featured online shop built with Django that implements essential e-commerce functionalities.
 - Customers can browse products, add them to carts, apply discounts, checkout securely, and receive invoices.
 - A recommendation engine suggests relevant products, and internationalization enables multi-language support
