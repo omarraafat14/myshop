@@ -7,3 +7,4 @@ stripe==4.0.2
 git+https://github.com/django-extensions/django-extensions.git
 werkzeug==2.2.2
 pyOpenSSL==24.0.0
+WeasyPrint==56.1
