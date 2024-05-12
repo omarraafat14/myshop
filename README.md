@@ -80,7 +80,7 @@
    - This opens Flower's web interface (usually at http://localhost:5555) for monitoring Celery tasks.
 
 7. Run Redis for product recommendation:
-   `docker run -it --rm --name redis -p 6379:6379 redis`
+   - `docker run -it --rm --name redis -p 6379:6379 redis`
 
 ## Usage
 
